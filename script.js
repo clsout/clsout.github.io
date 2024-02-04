@@ -227,7 +227,11 @@ $(document).ready(function() {
       loadSong();
     }
     function addToPlayList(data, index) {
-      var html = ""; html = $('#show-list').html(); html += "<div class=\"float-song-card\" data-index=\"" + index + "\"><img class=\"album-art\" src=\"" + data.albumart + "\"><h2 class=\"song\">" + data.song + "</h2><h4 class=\"artist\">" + data.author + "</h4></div>"; $('#show-list').html(html); $('.float-song-card').on('click', function() { playSongAtIndex($(this).attr("data-index")); });
+      // var html = ""; html = $('#show-list').html(); html += "<div class=\"float-song-card\" data-index=\"" + index + "\"><img class=\"album-art\" src=\"" + data.albumart + "\"><h2 class=\"song\">" + data.song + "</h2><h4 class=\"artist\">" + data.author + "</h4></div>"; $('#show-list').html(html); $('.float-song-card').on('click', function() { playSongAtIndex($(this).attr("data-index")); });
+      var html = "";
+      html = $('#show-list').html();
+      html += "<div class=\"float-song-card\" data-index=\"" + index + "\"><img class=\"album-art\" src=\"" + "./失恋阵线联盟.jpeg" + "\"><h2 class=\"song\">" + data.song + "</h2><h4 class=\"artist\">" + data.author + "</h4></div>"; $('#show-list').html(html);
+      $('.float-song-card').on('click', function() { playSongAtIndex($(this).attr("data-index")); });
     }
     function setPlaylist() {
       for (var i = 0; i < playlist.songs.length; i++) {

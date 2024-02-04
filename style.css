@@ -377,3 +377,12 @@ body {
 .floating-icon:nth-child(2) {
   right: 12vh;
 }
+
+
+@media only screen and (max-width: 600px) {
+  /* 在此添加适配移动端的样式 */
+  body {
+    font-size: 14px;
+  }
+  /* 其他样式 */
+}
